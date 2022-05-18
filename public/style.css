@@ -1,0 +1,239 @@
+*{padding: 0; margin: 0; box-sizing: border-box; outline: none}
+body{font-family: Arial, Helvetica, sans-serif;}
+ul{margin: 0; padding: 0; list-style: none;}
+a{text-decoration: none;outline: none; color: inherit;}
+.container{width: 80%; max-width: 1440px; margin: auto;}
+
+/* Header */
+.headerTop{ background: #00923f; padding: .8rem 0; box-shadow: 0 0px 8px 2px #00923f;}
+.headerTopStyle{display: flex; justify-content: space-between; align-items: center;}
+.headerTopLeft p{color: #ffffff; font-size: 1.2rem;}
+.headerTopLeft p::before{display:inline-block; content: ''; height: 7px; width: 7px; background: #ffffff; border-radius: 50%; margin: 0 8px 3px 0;}
+.headerTopRight{display: flex; flex-direction: row; justify-content: center; align-items: center;}
+.headerTopRight ul{display: flex;}
+.headerTopRight ul li{color: #ffffff; margin: 0 7px;}
+.headerTopRight ul li:nth-child(2)::before{display:inline-block; content: '/'; margin-right: 10px; font-weight: bold;}
+.headerTopRight ul li:nth-child(4){ background-color: rgba(10, 71, 50, 0.653); border-radius: 40%; padding: 1px 7px; margin-left: 0;}
+.headerBody{display: flex; justify-content: space-between; padding: 2rem 0;}
+.headerBody .adArea {display: flex; justify-content: center; align-items: center;}
+.headerBody .adArea .adStyle{display: flex; flex-direction: column; justify-content: center; background: #d8d3d3; padding: 3px 1em; border-radius: 4px;}
+.headerBody .adArea .adStyle span:first-child{color: #646060; text-align: center;}
+.headerBody .adArea .adStyle span:last-child{color: #00923f; font-weight: bold; font-size: 1.5rem;}
+.searchArea{background: #bfbfbfd8; padding: .5rem 0;}
+.searchArea form {display: grid; grid-template-columns: .6fr .6fr 1fr; grid-column-gap: 1.5rem;}
+.searchArea form select,
+.searchArea form .srbtn input { border: none; border-radius: 3px; padding: .5rem; font-size: 1.1rem;}
+.searchArea form select {appearance: none; color: rgb(159, 156, 156); background-color: #ffffff; width: 100%;}
+.searchArea .sec1,
+.searchArea .sec2 {position: relative}
+.searchArea .sec1 span,
+.searchArea .sec2 span{position: absolute; top: 20%; right: 1rem; font-size: 1.5rem; color: #706d6d; pointer-events: none;}
+.searchArea form .srbtn input[type="search"]{width: 70%; border-top-right-radius: 0; border-bottom-right-radius: 0}
+.searchArea form .srbtn input[type="submit"]{width: 28%;  background: #00923f; color: #ffffff; border-top-left-radius: 0; border-bottom-left-radius: 0; box-shadow: 1px 1px 7px 0 #00923f; transition: box-shadow 0.3s ease;}
+.searchArea form .srbtn input[type="submit"]:hover{  box-shadow: 0 0 0 0}
+
+/* Main section */
+.mainBody{ position: relative;}
+.menubar {display: none; justify-content: center; align-items: center; cursor: pointer; position: absolute; top: 2.5rem; right: 0;}
+@keyframes wave {
+    0%{ background-color: #8501f9;}
+    100%{background-color: #00923f;}
+}
+.menubar .menuIcon{transition: all .3s ease; padding: .5rem .9rem; border-radius: 4px; background-color: #424242; font-size: 1.3rem; z-index: 999; animation: wave 5s infinite;}
+.menubar .fa-bars{color: #ffffff;}
+.menubar .fa-times{color: red;}
+#main{padding:3rem 0; display: grid; grid-template-columns: .25fr 1fr .3fr; grid-column-gap: 1rem;}
+.adSection img {height: 250px; width: 100%;}
+.productSection{display: grid; grid-template-columns:repeat(auto-fit, minmax(200px, .1fr)); grid-gap: 1.5rem .5rem;}
+.productSection .card{border: 1.8px solid #e3e1e1; transition: .5s; width: 200px; height: 240px;}
+.productSection .card img{display: flex; align-self: flex-start; height: 170px; width: 155px; margin: 10px auto; border: 1.8px solid #e3e1e1; padding: 1rem ; cursor: pointer; transition: all 0.3s ease; background: #ffffff;}
+.productSection .card img:hover{transform: scale(1.2);}
+.productSection .productDes{width: 90%; margin: 5px auto;}
+.productSection .productDes p{font-size: 1rem; color: #424242}
+.productSection .productDes .info{margin:5px auto; display: flex; justify-content: space-between;}
+.productSection .productDes .info .price{color:#00923f}
+.productSection .productDes .info .time{color:#a0a4a2}
+.catagorySection {position: relative; }
+.catagorySection li.active{ color: #00923f;}
+.catagorySection h2{font-size: 1.5rem; font-weight: normal; border-bottom: 4px double #a0a4a2; padding-bottom: .5rem;}
+.catagorySection ul li {border-bottom: 1.5px solid #a0a4a2; padding: .5rem 0; text-transform: uppercase; font-size: 1rem; cursor: pointer;}
+.catagorySection ul li i{display: inline-block; margin-right: 5px;}
+
+
+/* Footer */
+#footer{ position: relative;}
+.footerTop{background: #d8d3d3;}
+.footerTop .footerTab{display: flex; justify-content: space-between; padding: .8rem 0}
+.footerTop .footerTab ul{display: flex; align-items: center;}
+.footerTop .footerTab .footerTopLeft li{border-right: 1.8px solid #6e6c6c}
+.footerTop .footerTab .footerTopLeft li a{font-size: 1.2rem; padding:0 1rem; color: #6e6c6c;}
+.footerTop .footerTab .footerTopRight li{margin: 0 3px;}
+.footerBody{width: 60%; margin: auto; text-align: center; padding: 2rem 0;}
+.footerBody .socialSection{display: flex; justify-content: center;}
+.footerBody .socialSection li{height: 45px; width: 45px; border: 1px solid #424242; border-radius: 50%; display: flex; justify-content: center; align-items: center; margin: .5rem; transition: all 0.3s ease;}
+.footerBody .socialSection li a i {font-size: 1.4rem; color: rgb(100, 99, 99);}
+.footerBody .socialSection li:hover{background: #45b0e3; border: 1px solid #45b0e3; }
+.footerBody .socialSection li:hover a i {color: #ffffff;}
+.footerBody .footerContent {font-size: 1rem; margin-top: 1.5rem; line-height: 1.3em; color: #949191;}
+.footerBody .upArrow {position: absolute; bottom: 2rem; right: 4rem;}
+.footerBody .upArrow i{font-size: 3rem; padding: 0 .6rem; background: #6e6c6c; color: aliceblue;}
+
+/*Register */
+.register{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: url('img/userRegister.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.registerTile {
+    font-size: 50px;
+    text-align: center;
+    color: wheat;
+}
+.registerForm {
+    display: flex;
+    flex-direction: column;
+}
+.registerForm > label {
+    margin: 10px 0;
+    color: white;
+}
+.registerInput {
+    padding: 10px;
+    background-color: white;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+}
+.registerButton {
+    margin-top: 30px;
+    cursor: pointer;
+    background-color: rgb(13, 245, 52);
+    border: none;
+    border-radius: 10px;
+    padding: 7px;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    font-weight: bold;
+}
+.registerLoginButton {
+    position: absolute;
+    top: 80px;
+    right: 50px;
+    background-color: rgb(241, 13, 82);
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    padding: .4em 2em;
+    color: white;
+    font-size: 20px;
+}
+
+/* LogIn */
+.login{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: url('img/userLogin.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.loginTitle {
+    font-size: 50px;
+    text-align: center;
+    color: wheat;
+}
+.loginForm {
+    margin-top: 20;
+    display: flex;
+    flex-direction: column;
+}
+.loginFormBox {
+    height: 400px;
+    padding: 50px;
+    padding-top: 25px;
+    background-color:red;
+    border-radius: 10px;
+    opacity: .6;
+}
+.loginForm > label {
+    margin: 10px 0;
+    color: white;
+}
+.loginInput {
+    padding: 10px;
+    background-color: white;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+}
+.loginButton {
+    margin-top: 30px;
+    cursor: pointer;
+    background-color: rgb(255, 208, 190);
+    border: none;
+    border-radius: 10px;
+    padding: 7px;
+    color: rgb(2, 51, 51);
+    font-size: 20px;
+    font-weight: bold;
+}
+.loginRegisterButton {
+    position: absolute;
+    top: 80px;
+    right: 50px;
+    background-color: rgb(212, 90, 33);
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    padding: .4em 2em;
+    color: white;
+    font-size: 20px;
+}
+
+/* Responsive Part */
+@media only screen and (max-width: 991px) {
+    .mainBody .menubar{display: flex;}
+    #main {grid-template-columns: .3fr 1fr}
+    .searchArea{padding: 1rem 0;}
+    .searchArea form .srbtn input[type="submit"]{margin-top: 1rem;}
+    .searchArea form {grid-template-columns: 1fr; grid-gap: 1rem 0;}
+    .searchArea form .srbtn input[type="search"] { width: 100%; border-radius: 3px;}
+    .searchArea form select, .searchArea form .srbtn input{font-size: 1rem;}
+    .catagorySection {display: none; right: -300px; transition: all .3s ease;}
+    .catagorySection.active {display: block; position: absolute; top: 5rem; right: 0; background: rgb(53, 52, 52); padding: 1rem; border-radius: 4px; color: #fff; z-index: 9999;}
+    .footerBody {width: 100%;}
+    .footerTop .footerTab .footerTopLeft li a {font-size: 1rem; padding: 0 .4rem; }
+    .headerTopLeft p { font-size: 1rem}
+}
+
+@media only screen and (max-width: 768px) {
+    .container{width: 95%;}
+    .logoArea img {width: 150px;}
+    .headerBody .adArea .adStyle span:last-child{font-size: 1rem;}
+    .headerTopStyle{flex-direction: column;}
+    .headerTopLeft{margin-bottom: 1rem;}
+    .footerTop .footerTab { flex-direction: column}
+    .footerTop .footerTab .footerTopRight{margin-top: 1rem;}
+    .footerBody .footerContent { font-size: .8rem; margin-top: 1.5rem;}
+    .footerBody .upArrow { bottom: 7rem; right: 3rem;}
+    .loginRegisterButton,.registerLoginButton { top: 30px;}
+}
+@media only screen and (max-width: 512px) { 
+    .footerBody {width: 90%;}
+    .footerBody .upArrow i { font-size: 3rem; padding: 0 .3rem;}
+    .footerBody .upArrow i{font-size: 2rem;}
+    .adSection{display: none;}
+}
+@media only screen and (max-width: 370px) {
+    .headerTopLeft p,.headerTopRight ul { font-size: .8rem}
+    #main{grid-template-columns: .5fr; padding: 3rem;}
+    .footerTop .footerTab .footerTopLeft li a{font-size: .7rem;}
+    .footerBody .upArrow {bottom: 8rem; right: 1rem;}
+}

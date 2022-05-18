@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Asadulla Ahmed">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="simple ecommerce site" />
+    <title> Modern Shop</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="register" onSubmit={SubmitUser}>
+        <div class="registerFormBox">
+            <div class="registerTile">Register</div>
+            <form class="registerForm" method="post">
+                <label>Yourname</label>
+                <input type="text" class="registerInput" name="username" placeholder="Enter your name..."/>
+                <label>Email</label>
+                <input type="email" class="registerInput" name="email" placeholder="Enter an email..." />
+                <label>Password</label>
+                <input type="password" class="registerInput" name="password" placeholder="Enter new password..." />
+                <button class="registerButton" type="submit" >Register</button>
+            </form>
+        </div>
+        <button class="registerLoginButton">
+            <a class="link" href="/login">Login</a>
+        </button>
+    </div>
+
+</body>
+
+</html>
